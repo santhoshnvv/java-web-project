@@ -8,8 +8,8 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                deploy adapters: [tomcat7(credentialsId: '3c7715c5-eb8a-48d1-ab79-aef1b35753be', path: '',
-                url: 'http://ec2-18-217-141-92.us-east-2.compute.amazonaws.com:8080/')], 
+                deploy adapters: [tomcat7(credentialsId: '9b156e6e-7980-41f7-96de-dbe1b922e9a7', path: '', 
+                url: 'http://ec2-3-128-204-155.us-east-2.compute.amazonaws.com:8080/')], 
                 contextPath: 'javawebapp', war: '**/java-web-project.war'
             }
         }
